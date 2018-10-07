@@ -61,4 +61,4 @@ typings/
 .next
 
 # exclude practice text file
-.txt
+*.txt
