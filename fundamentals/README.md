@@ -1,13 +1,13 @@
 # コンソールからのdebuggingの方法
 - ソースコードのどこかに`debugger;`を置く.そこがブレークポイントになる.
-- ``node inspect app.js read --title="secret1"```  
+- ```node inspect app.js read --title="secret1"```  
 で, デバッガーモードを発動する.
 - ```n```  
 で, コードを1行ずつ見ていける.
 - ```c```  
 で, `debugger;`のあるところまで, 自動で進んでくれる.
 - ```repl```  
-で,デバッグモードスタート.
+で, デバッグモードスタート.
 - ```note```  
 で, noteの中身を見える.
 - ```control + c```  
