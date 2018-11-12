@@ -32,7 +32,7 @@ let addNote = (title, body) => {
 };
 
 let getAll = () => {
-  console.log('Getting all notes');
+  return fetchNotes();
 };
 
 let getNote = (title) => {
@@ -50,7 +50,7 @@ let removeNote = (title) => {
 
 let logNote = (note) => {
   debugger;
-  console.log('------------');
+  console.log('-------------------');
   console.log(`Title: ${note.title}`);
   console.log(`body: ${note.body}`);
 }
