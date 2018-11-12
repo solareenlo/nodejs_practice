@@ -49,9 +49,10 @@ let removeNote = (title) => {
 };
 
 let logNote = (note) => {
-    console.log('------------');
-    console.log(`Title: ${note.title}`);
-    console.log(`body: ${note.body}`);
+  debugger;
+  console.log('------------');
+  console.log(`Title: ${note.title}`);
+  console.log(`body: ${note.body}`);
 }
 
 module.exports = {
