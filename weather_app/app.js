@@ -15,14 +15,21 @@ const argv = yargs
   .argv;
 
 let encodeAddress = encodeURIComponent(argv.address);
+const myKey = 'yourKey';
 
 request({
-  url: `http://www.mapquestapi.com/geocoding/v1/address?key=yourKey&location=${encodeAddress}`,
+  url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeAddress}&key=${myKey}`,
   json: true
 }, (error, reqponse, body) => {
+  if (error) {
+    console.log('Unable to connect to mapquest servers.');
+  } else if (body.status === 'ZERO_RESULTS') {
+    console.log('Unable to find that address.');
+  } else if (body.status === 'OK') {
+  console.log(body);
+  console.log(`Address: ${body.results[0].formatted_address}`);
+  console.log(`Latitude: ${body.results[0].geometry.location.lat}`);
+  console.log(`Longitude: ${body.results[0].geometry.location.lng}`);
   // console.log(JSON.stringify(body, undefined, 2));
-  // console.log(body);
-  console.log(`Address: ${body.results[0].providedLocation.location}`);
-  console.log(`Latitude: ${body.results[0].locations[0].latLng.lat}`);
-  console.log(`Longitude: ${body.results[0].locations[0].latLng.lng}`);
+  }
 });
