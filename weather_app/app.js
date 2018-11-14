@@ -5,7 +5,8 @@ request({
   json: true
 }, (error, reqponse, body) => {
   console.log(JSON.stringify(body, undefined, 2));
-  console.log(body.results[0]);
-  console.log(body.results[0].locations[0].latLng.lat);
-  console.log(body.results[0].locations[0].latLng.lng);
+  console.log(body);
+  console.log(`Address: ${body.results[0].providedLocation.location}`);
+  console.log(`Latitude: ${body.results[0].locations[0].latLng.lat}`);
+  console.log(`Longitude: ${body.results[0].locations[0].latLng.lng}`);
 });
