@@ -1,6 +1,6 @@
 const request = require('request');
 
-const myKey = 'your_google_api_key';
+const myKey = 'your_api_key';
 
 let geocodeAddress = (address, callback) => {
   let encodeAddress = encodeURIComponent(address);

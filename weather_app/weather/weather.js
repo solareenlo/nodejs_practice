@@ -1,6 +1,23 @@
 const request = require('request');
 
-const myKey = 'f5e72f17f9fd06c527530e6d6ec0e2ed';
+const myKey = 'your_api_key';
 
-let weather = (address, callback) => {
+let getWeather = (lat, lng, callback) => {
+  request({
+    url: `https://api.darksky.net/forecast/${myKey}/${lat},${lng}`,
+    json: true
+  }, (error, response, body) => {
+    if (error) {
+      callback('Unable to connect to Forecast.io server.');
+    } else if (!error && response.statusCode === 200) {
+      callback(undefined, {
+        temperature: body.currently.temperature,
+        apparentTemperature: body.currently.apparentTemperature
+      });
+    } else {
+      callback('Unable to fetch weather.');
+    }
+  });
 };
+
+module.exports.getWeather = getWeather;
