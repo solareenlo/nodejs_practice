@@ -1,0 +1,22 @@
+{
+  "name": "node-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solareenlo/nodejs_practice.git"
+  },
+  "author": "solareenlo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solareenlo/nodejs_practice/issues"
+  },
+  "homepage": "https://github.com/solareenlo/nodejs_practice#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
