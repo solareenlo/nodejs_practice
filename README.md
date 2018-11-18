@@ -1,6 +1,9 @@
 # nodejs_practice
 udemy使った, nodejsの練習.
 
+## npmの`expect`, `mocha`, `nodemon`, `supertest`は,
+テスト環境を実装する便利なツール.
+
 ## fundamentalsでは,
 コンソールから入力したデータを格納したり, 表示したり, 削除したりする機能を実装.
 
