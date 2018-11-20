@@ -17,3 +17,8 @@ https://github.com/solareenlo/web_server_heroku
 
 ## node-testsでは,
 mochaとexpressとspiesを使って, アプリのテストを実行.
+
+## node-todo-apiでは,
+mongodbとmongooseとexpressとherokuとPostmanとRobo3Tを使って, 本番環境とテスト環境両方での, DBのJSON形式のデータの新規作成/閲覧/削除/編集機能を実装.  
+herokuでデプロイするためにリポジトリはこちらに移動↓  
+https://github.com/solareenlo/node-todo-api
